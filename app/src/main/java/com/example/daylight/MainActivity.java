@@ -8,6 +8,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
+import com.google.android.material.tabs.TabLayout;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         // 프래그먼트 매니저 생성과 동시에 어댑터에 할당 즉, 매니저=어댑터
         PagerAdapter pa = new PagerAdapter(getSupportFragmentManager());
 
+        TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
+
         Center_main_Fragment cmf = new Center_main_Fragment();
         Right_main_Fragment rmf = new Right_main_Fragment();
         Left_main_Fragment lmf = new Left_main_Fragment();
@@ -35,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         pager.setAdapter(pa);
         pager.setCurrentItem(1);
+        tabs.setupWithViewPager(pager);
     }
 
     // 프레그먼트 커스텀 어댑터
