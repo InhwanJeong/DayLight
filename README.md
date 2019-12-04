@@ -14,8 +14,8 @@
 
 
 ## 참고자료
-
-https://github.com/chthai64/SwipeRevealLayout
+[How to Use Firebase](https://github.com/yongjjang/Study/blob/master/3%E1%84%92%E1%85%A1%E1%86%A8%E1%84%82%E1%85%A7%E1%86%AB%202%E1%84%92%E1%85%A1%E1%86%A8%E1%84%80%E1%85%B5/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%EC%9D%91%EC%9A%A9/Firebase.md
+https://github.com/chthai64/SwipeRevealLayout)
 
 ## License
 ### SNS License
