@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':swipe-reveal-layout'
 rootProject.name='DayLight'
