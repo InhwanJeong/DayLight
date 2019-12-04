@@ -13,6 +13,10 @@
 - Donghyeon 김동현
 
 
+## 참고자료
+
+https://github.com/chthai64/SwipeRevealLayout
+
 ## License
 ### SNS License
 - Copyright (c) 2019 inhwan,taeyong, donghyeon, mingwang  
@@ -20,3 +24,5 @@
 - We do not want money or honor.
 - Feel free to bring as much as you need.
 - If we meet some day, U can buy me a Samgyeopsal and Soju.
+
+
