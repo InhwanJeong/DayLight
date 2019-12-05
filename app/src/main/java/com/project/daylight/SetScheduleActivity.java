@@ -32,10 +32,8 @@ import java.lang.reflect.Field;
 import java.util.Set;
 
 public class SetScheduleActivity extends AppCompatActivity {
-    long num = 1;     // event 번호를 지정
+    long num;     // event 번호를 지정
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-
 
     // 입력받은 에디트 텍스트뷰 값 저장하는 메소드
     void setSchedule(String str, EditText tv)
@@ -46,7 +44,7 @@ public class SetScheduleActivity extends AppCompatActivity {
         myRef = database.getReference("DayLight/" +
                 user.getUid() + "/schedule/event"+ (num+1) + "/" + str);
 
-        myRef.setValue(tv.getText() + "");
+        myRef.setValue(tv.getText().toString());
     }
 
     // DatePicker 로 고른 날짜 저장하는 메소드 ( 오버라이딩 )
@@ -113,7 +111,7 @@ public class SetScheduleActivity extends AppCompatActivity {
             setSchedule("memo", memo);
             setSchedule("date", datePicker);
             setSchedule("time", timePicker);
-            findEventNumber();
+
             //str = title.getText() + " / " + category.getText() + " / " + gift.getText() + " / " +
             //        location.getText() + " / " + memo.getText();
 
@@ -122,8 +120,6 @@ public class SetScheduleActivity extends AppCompatActivity {
             //        (datePicker.getMonth()+1) + " 월 " + datePicker.getDayOfMonth() + " 일 입니다.", LENGTH_SHORT).show();
             //makeText(SetScheduleActivity.this, timePicker.getHour() + " 시 " + timePicker.getMinute() + " 분 ", LENGTH_SHORT).show();
             //myRef.setValue(str);
-
-            num++;
         }
     };
 
@@ -136,8 +132,12 @@ public class SetScheduleActivity extends AppCompatActivity {
         Button add_btn;
         textColor(findViewById(R.id.datePicker), Color.WHITE);
         textColor(findViewById(R.id.timePicker), Color.WHITE);
+
         add_btn = findViewById(R.id.add_btn);
         add_btn.setOnClickListener(listener);
+
+        findEventNumber();
+
     }
 
 //    private void setCustomActionbar() {
@@ -175,7 +175,6 @@ public class SetScheduleActivity extends AppCompatActivity {
             }
         }
     }
-
 
     void textColor(View $v, int $color) {
         if ($v instanceof NumberPicker) numberPickerTextColor((NumberPicker) $v, $color);
