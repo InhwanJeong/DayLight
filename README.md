@@ -9,8 +9,8 @@
 ## Contributor
 - Taeyong LEE (pastelhawk@gmail.com)
 - Inhwan JEONG 정인환
-- Mingwang SONG 송민광
-- Donghyeon 김동현
+- Mingwang SONG 송민광 (alsrhkd77@gmail.com)
+- Donghyeon 김동현 (emboob@naver.com)
 
 
 ## 참고자료
