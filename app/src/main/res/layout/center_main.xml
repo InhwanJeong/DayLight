@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/center_linear_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
+    android:background="#757CFF"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/center_linear_layout4"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="#00FF0808"
+        android:background="#424CFF"
         android:orientation="horizontal">
 
         <TextView
@@ -19,29 +20,31 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
             android:layout_weight="1"
-            android:gravity="center"
+            android:gravity="center|left"
             android:text="D-1"
-            android:textColor="@color/blue"
-            android:textSize="36sp" />
+            android:textColor="@color/white"
+            android:textSize="50sp" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/title123"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:adjustViewBounds="false"
             android:gravity="center"
-            android:text="맑음"
-            android:textColor="@color/colorAccent"
-            android:textSize="36sp" />
+            android:scaleType="fitEnd"
+            app:srcCompat="@drawable/sunny" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/center_linear_layout3"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="#00FF0B0B"
+        android:background="#424CFF"
         android:orientation="horizontal">
 
         <TextView
@@ -61,6 +64,9 @@
         android:id="@+id/center_linear_layout2"
         android:layout_width="match_parent"
         android:layout_height="330dp"
+
+        android:background="#757CFF"
+        android:backgroundTint="#757CFF"
         android:orientation="vertical">
 
         <LinearLayout
@@ -75,23 +81,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:layout_weight="1"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:backgroundTint="#757CFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/anniversary" />
 
             <ImageButton
                 android:id="@+id/imageButton12"
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:layout_weight="1"
-                android:src="@mipmap/ic_launcher_round"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:backgroundTint="#757CFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/exchange" />
 
             <ImageButton
                 android:id="@+id/imageButton13"
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:layout_weight="1"
-                android:src="@drawable/googleg_standard_color_18"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:backgroundTint="#757CFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/pe" />
 
         </LinearLayout>
 
@@ -100,6 +110,7 @@
             android:layout_height="110dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
+            android:backgroundTint="#757CFF"
             android:orientation="horizontal">
 
             <ImageButton
@@ -107,23 +118,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:layout_weight="1"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:backgroundTint="#757CFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/work" />
 
             <ImageButton
                 android:id="@+id/imageButton22"
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:layout_weight="1"
-                tools:srcCompat="@tools:sample/avatars"
-                tools:visibility="visible" />
+                android:backgroundTint="#757CFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/business" />
 
             <ImageButton
                 android:id="@+id/imageButton23"
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:layout_weight="1"
-                android:src="@drawable/common_google_signin_btn_icon_dark"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:backgroundTint="#757CFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/couple" />
 
         </LinearLayout>
 
@@ -132,6 +147,7 @@
             android:layout_height="110dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
+            android:backgroundTint="#757CFF"
             android:orientation="horizontal">
 
             <ImageButton
@@ -139,22 +155,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:layout_weight="1"
-                android:src="@drawable/common_google_signin_btn_icon_dark"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:background="#757CFF"
+                android:backgroundTint="#757CFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/stoneparty" />
 
             <TextView
                 android:id="@+id/imageButton32"
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:backgroundTint="#757CFF" />
 
             <ImageButton
                 android:id="@+id/imageButton33"
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:layout_weight="1"
-                android:src="@drawable/common_google_signin_btn_icon_dark"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:backgroundTint="#757CFF"
+                android:scaleType="fitCenter"
+                android:src="@drawable/meal" />
 
         </LinearLayout>
 
