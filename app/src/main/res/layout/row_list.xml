@@ -20,7 +20,7 @@
             android:id="@+id/share_layout"
             android:layout_width="70dp"
             android:layout_height="match_parent"
-            android:background="#757CFF"
+            android:background="#B3757CFF"
             android:gravity="center"
             android:text="Share"
             android:textColor="@android:color/white" />
@@ -29,7 +29,7 @@
             android:id="@+id/update_layout"
             android:layout_width="70dp"
             android:layout_height="match_parent"
-            android:background="#757CFF"
+            android:background="#D9757CFF"
             android:gravity="center"
             android:text="Update"
             android:textColor="@android:color/white" />
@@ -59,20 +59,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
+                android:gravity="center|left"
                 android:textColor="@android:color/white"
-                android:textSize="18sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/swipe_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_marginRight="30dp"
                 android:layout_weight="1"
-                android:gravity="center"
+                android:gravity="center|right"
                 android:textColor="@android:color/white"
-                android:textSize="18sp" />
+                android:textSize="30sp" />
         </LinearLayout>
 
     </FrameLayout>

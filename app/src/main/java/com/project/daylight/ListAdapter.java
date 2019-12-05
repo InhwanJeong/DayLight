@@ -62,7 +62,7 @@ public class ListAdapter extends ArrayAdapter<String> {
 
             // 실제 커스텀 리스트뷰에 들어갈 문자열 세팅 및 클릭 리스너 이벤트 정의
             holder.textView.setText(item);
-            holder.swipeTextView.setText("타이틀" + position);
+            holder.swipeTextView.setText("이난이 돌잔치" + position);
             holder.deleteView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
