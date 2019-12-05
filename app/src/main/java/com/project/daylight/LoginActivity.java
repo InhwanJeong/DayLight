@@ -50,7 +50,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
-
 //        ButterKnife.bind(this);
 
         mAuth = FirebaseAuth.getInstance();
@@ -80,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 checkValidUser(email, password);
 
-                if(!isValidUser)
+                if (!isValidUser)
                     return;
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);

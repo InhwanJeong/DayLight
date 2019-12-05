@@ -8,26 +8,23 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
+    FloatingActionButton floatingActionButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +33,17 @@ public class MainActivity extends AppCompatActivity {
         //Intent intent = new Intent(MainActivity.this, ListDemoActivity.class);
         //startActivity(intent);
 
+//        floatingActionButton = findViewById(R.id.floatingActionButton);
+
+
+        floatingActionButton = (FloatingActionButton)findViewById(R.id.floatingActionButton);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SetScheduleActivity.class);
+                startActivity(intent);
+            }
+        });
         ViewPager pager = findViewById(R.id.viewpager);
         // 미리 캐싱 - 준비 해놓을 프레그먼트 개수
         pager.setOffscreenPageLimit(3);
@@ -44,9 +52,9 @@ public class MainActivity extends AppCompatActivity {
         PagerAdapter pa = new PagerAdapter(getSupportFragmentManager());
         TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
 
-        Center_main_Fragment cmf = new Center_main_Fragment();
-        Right_main_Fragment rmf = new Right_main_Fragment();
-        Left_main_Fragment lmf = new Left_main_Fragment();
+        CenterMainFragment cmf = new CenterMainFragment();
+        RightMainFragment rmf = new RightMainFragment();
+        LeftMainFragment lmf = new LeftMainFragment();
         pa.addItem(lmf, "settings");
         pa.addItem(cmf, "logo");
         pa.addItem(rmf, "calender");
@@ -60,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         tabs.getTabAt(1).setText("Day-Light");
         tabs.getTabAt(2).setText("");
         tabs.getTabAt(2).setIcon(R.drawable.ic_calender);
+
+
         createNotificationChannel();
         setMainNotification();
     }

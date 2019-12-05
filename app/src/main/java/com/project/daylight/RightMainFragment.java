@@ -4,11 +4,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,15 +21,19 @@ import java.util.List;
  *  Created by inhwan Jeong on 4/12/19.
  */
 
-public class Right_main_Fragment extends Fragment {
+public class RightMainFragment extends Fragment {
+//    FirebaseAuth UID = FirebaseAuth.getInstance().getCurrentUser();
+
 
     private  ListAdapter adapter;
     private ListView listView;
 
+    Button button;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
+//        String uid = UID.getUid();
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.right_main, container,false);
         //activity_main.xml2이 인플레이트 되고 자바 소스와 연결됨
 
@@ -47,4 +55,5 @@ public class Right_main_Fragment extends Fragment {
 
         return list;
     }
+
 }

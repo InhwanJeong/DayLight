@@ -18,21 +18,34 @@ import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.lang.reflect.Field;
+import java.util.Set;
 
 public class SetScheduleActivity extends AppCompatActivity {
-    int num = 1;
+    long num = 1;     // event 번호를 지정
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+
 
     // 입력받은 에디트 텍스트뷰 값 저장하는 메소드
     void setSchedule(String str, EditText tv)
     {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef;
-        myRef = database.getReference("user/schedule/event"+ num + "/" + str);
+
+        myRef = database.getReference("DayLight/" +
+                user.getUid() + "/schedule/event"+ (num+1) + "/" + str);
+
         myRef.setValue(tv.getText() + "");
     }
 
@@ -41,7 +54,7 @@ public class SetScheduleActivity extends AppCompatActivity {
     {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef;
-        myRef = database.getReference("user/schedule/event"+ num + "/" + str);
+        myRef = database.getReference("DayLight/" + user.getUid() + "/schedule/event"+ (num+1) + "/" + str);
         myRef.setValue(datePicker.getYear() + "" + (datePicker.getMonth()+1) + "" + datePicker.getDayOfMonth());
     }
 
@@ -50,9 +63,32 @@ public class SetScheduleActivity extends AppCompatActivity {
     {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef;
-        myRef = database.getReference("user/schedule/event"+ num + "/" + str);
+        myRef = database.getReference("DayLight/" + user.getUid() + "/schedule/event"+ (num+1) + "/" + str);
         myRef.setValue(timePicker.getHour() + "" + timePicker.getMinute());
     }
+
+    // 내부에서 값을 읽어서 이벤트 번호를 찾는 메소드
+    void findEventNumber() {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef;
+        myRef = database.getReference("DayLight/" + user.getUid() + "/schedule/");
+
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+
+                num = dataSnapshot.getChildrenCount();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+            }
+        });
+    }
+
 
     View.OnClickListener listener = new View.OnClickListener() {
         @Override
@@ -77,7 +113,7 @@ public class SetScheduleActivity extends AppCompatActivity {
             setSchedule("memo", memo);
             setSchedule("date", datePicker);
             setSchedule("time", timePicker);
-
+            findEventNumber();
             //str = title.getText() + " / " + category.getText() + " / " + gift.getText() + " / " +
             //        location.getText() + " / " + memo.getText();
 
@@ -95,34 +131,34 @@ public class SetScheduleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_schedule_main);
-        setCustomActionbar();
 
+        Toast.makeText(SetScheduleActivity.this, user.getUid() + "", Toast.LENGTH_SHORT).show();
         Button add_btn;
-
+        textColor(findViewById(R.id.datePicker), Color.WHITE);
+        textColor(findViewById(R.id.timePicker), Color.WHITE);
         add_btn = findViewById(R.id.add_btn);
         add_btn.setOnClickListener(listener);
     }
 
-    private void setCustomActionbar() {
-        ActionBar actionBar = getSupportActionBar();
+//    private void setCustomActionbar() {
+//        ActionBar actionBar = getSupportActionBar();
+//
+//        actionBar.setDisplayShowCustomEnabled(true);
+//        actionBar.setDisplayHomeAsUpEnabled(false);
+//        actionBar.setDisplayShowTitleEnabled(false);
 
-        actionBar.setDisplayShowCustomEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(false);
-        actionBar.setDisplayShowTitleEnabled(false);
+//        View mCustomView = LayoutInflater.from(this).inflate(R.layout.actionbar_main, null);
+//        actionBar.setCustomView(mCustomView);
+//
+//        Toolbar parent = (Toolbar) mCustomView.getParent();
+//        parent.setContentInsetsAbsolute(0, 0);
 
-        View mCustomView = LayoutInflater.from(this).inflate(R.layout.actionbar_main, null);
-        actionBar.setCustomView(mCustomView);
+//        ActionBar.LayoutParams params = new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT);
+//        actionBar.setCustomView(mCustomView, params);
 
-        Toolbar parent = (Toolbar) mCustomView.getParent();
-        parent.setContentInsetsAbsolute(0, 0);
 
-        ActionBar.LayoutParams params = new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT);
-        actionBar.setCustomView(mCustomView, params);
-
-        textColor(findViewById(R.id.datePicker), Color.WHITE);
-        textColor(findViewById(R.id.timePicker), Color.WHITE);
-
-    }
+//
+//    }
 
     void numberPickerTextColor(NumberPicker $v, int $c) {
         for (int i = 0, j = $v.getChildCount(); i < j; i++) {

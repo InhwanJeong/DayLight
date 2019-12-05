@@ -25,7 +25,7 @@ import java.util.List;
  * created by inhwan Jeong on 4/12/19.
  */
 
-public class Left_main_Fragment extends Fragment {
+public class LeftMainFragment extends Fragment {
     TextView version_tv;
     TextView notification_tv;
     TextView donation_tv;

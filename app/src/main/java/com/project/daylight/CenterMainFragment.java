@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Center_main_Fragment extends Fragment {
+public class CenterMainFragment extends Fragment {
 
     @Nullable
     @Override
