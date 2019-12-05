@@ -140,27 +140,28 @@ public class SetScheduleActivity extends AppCompatActivity {
 
         findEventNumber();
 
+        //setCustomActionbar();
+
     }
 
-//    private void setCustomActionbar() {
-//        ActionBar actionBar = getSupportActionBar();
-//
-//        actionBar.setDisplayShowCustomEnabled(true);
-//        actionBar.setDisplayHomeAsUpEnabled(false);
-//        actionBar.setDisplayShowTitleEnabled(false);
+    /*
+    private void setCustomActionbar() {
+        ActionBar actionBar = getSupportActionBar();
 
-//        View mCustomView = LayoutInflater.from(this).inflate(R.layout.actionbar_main, null);
-//        actionBar.setCustomView(mCustomView);
-//
-//        Toolbar parent = (Toolbar) mCustomView.getParent();
-//        parent.setContentInsetsAbsolute(0, 0);
+        actionBar.setDisplayShowCustomEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(false);
+        actionBar.setDisplayShowTitleEnabled(false);
 
-//        ActionBar.LayoutParams params = new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT);
-//        actionBar.setCustomView(mCustomView, params);
+        View mCustomView = LayoutInflater.from(this).inflate(R.layout.actionbar_main, null);
+        actionBar.setCustomView(mCustomView);
 
+        Toolbar parent = (Toolbar) mCustomView.getParent();
+        parent.setContentInsetsAbsolute(0, 0);
 
-//
-//    }
+        ActionBar.LayoutParams params = new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT);
+        actionBar.setCustomView(mCustomView, params);
+    }
+     */
 
     void numberPickerTextColor(NumberPicker $v, int $c) {
         for (int i = 0, j = $v.getChildCount(); i < j; i++) {

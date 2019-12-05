@@ -12,13 +12,21 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -72,6 +80,56 @@ public class MainActivity extends AppCompatActivity {
 
         createNotificationChannel();
         setMainNotification();
+
+        //크롤링 테스트
+        Async test = new Async();
+        test.execute();
+    }
+
+    class Async extends AsyncTask<String, Integer, String> {
+
+        @Override
+        protected String doInBackground(String... strings) {
+            String kwd = "선물";
+            String age = "20대";
+            String sex = "남성";
+            StringBuilder pageurl = new StringBuilder("https://search.shopping.naver.com/search/all.nhn?query=");
+            pageurl.append(age + "+");
+            pageurl.append(sex + "+");
+            pageurl.append(kwd);
+            pageurl.append("&pagingIndex=1&pagingSize=40&viewType=list&sort=review&frm=NVSHATC&query=");
+            pageurl.append(age + "%20");
+            pageurl.append(sex + "%20");
+            pageurl.append(kwd);
+            Document doc = new Document("");
+            try {
+                doc = Jsoup.connect(pageurl.toString()).get();
+                selectItem(doc);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        private ArrayList<GiftSet> selectItem(Document doc){
+            ArrayList<GiftSet> itemList = new ArrayList<>();
+            GiftSet gift;
+            Elements e = doc.select("ul.goods_list").select("li._itemSection");
+            List<String> title = e.select("div.tit").select("a").eachText();
+            List<String> price =  e.select("span.price").select("span.num").eachText();
+            List<String> imgUrl = e.select("div.img_area").select("img._productLazyImg").eachAttr("data-original");
+            for(int i=0;i<7;i++){
+                gift = new GiftSet();
+                gift.title = title.get(i);
+                gift.price = price.get(i);
+                gift.imageUrl = imgUrl.get(i);
+                System.out.println(gift.title);
+                System.out.println(gift.price);
+                System.out.println(gift.imageUrl);
+                itemList.add(gift);
+            }
+            return itemList;
+        }
     }
 
     private void setMainNotification(){
