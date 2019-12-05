@@ -47,7 +47,7 @@
         android:id="@+id/front_layout"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#757CFF">
+        android:background="#424CFF">
 
         <LinearLayout
             android:layout_width="match_parent"
