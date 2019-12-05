@@ -11,14 +11,14 @@
     <LinearLayout
         android:id="@+id/center_linear_layout4"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="wrap_content"
         android:background="#424CFF"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/main_date"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="30dp"
             android:layout_weight="1"
@@ -30,7 +30,7 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/title123"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
@@ -43,7 +43,7 @@
     <LinearLayout
         android:id="@+id/center_linear_layout3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="#424CFF"
         android:orientation="vertical"
         android:paddingLeft="20sp"
@@ -52,7 +52,7 @@
         <TextView
             android:id="@+id/main_title"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="0.6"
             android:gravity="center_vertical"
@@ -64,7 +64,7 @@
         <TextView
             android:id="@+id/main_place"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="0.4"
             android:gravity="center_vertical"
             android:paddingTop="10sp"
@@ -78,7 +78,7 @@
     <LinearLayout
         android:id="@+id/center_linear_layout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
 
         android:background="#757CFF"
         android:backgroundTint="#757CFF"
@@ -86,7 +86,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_weight="1"
@@ -96,7 +96,7 @@
             <ImageButton
                 android:id="@+id/imageButton11"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF"
                 android:scaleType="fitCenter"
@@ -105,7 +105,7 @@
             <ImageButton
                 android:id="@+id/imageButton12"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF"
                 android:scaleType="fitCenter"
@@ -114,7 +114,7 @@
             <ImageButton
                 android:id="@+id/imageButton13"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF"
                 android:scaleType="fitCenter"
@@ -124,7 +124,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_weight="1"
@@ -135,7 +135,7 @@
             <ImageButton
                 android:id="@+id/imageButton21"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF"
                 android:scaleType="fitCenter"
@@ -144,7 +144,7 @@
             <ImageButton
                 android:id="@+id/imageButton22"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF"
                 android:scaleType="fitCenter"
@@ -153,7 +153,7 @@
             <ImageButton
                 android:id="@+id/imageButton23"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF"
                 android:scaleType="fitCenter"
@@ -173,7 +173,7 @@
             <ImageButton
                 android:id="@+id/imageButton31"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#757CFF"
                 android:backgroundTint="#757CFF"
@@ -184,14 +184,14 @@
             <TextView
                 android:id="@+id/imageButton32"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF" />
 
             <ImageButton
                 android:id="@+id/imageButton33"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF"
                 android:scaleType="fitCenter"

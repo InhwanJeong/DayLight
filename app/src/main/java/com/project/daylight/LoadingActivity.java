@@ -15,10 +15,17 @@ public class LoadingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading);
 
-        startLoading();
+        //startLoading();
+
+        try{
+            Thread.sleep(3000);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
 
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
+        finish();
     }
     private void startLoading() {
         Handler handler = new Handler();
@@ -27,7 +34,7 @@ public class LoadingActivity extends AppCompatActivity {
             public void run() {
                     finish();
             }
-        }, 2000);
+        }, 6000);
     }
 }
 

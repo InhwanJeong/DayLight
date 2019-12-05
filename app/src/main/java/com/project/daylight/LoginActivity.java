@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
 //    @BindView(R.id.login_btn)
 //    Button login_btn;
 
-
+    ImageView imageView;
     Button loginBtn;
     Button loginJoin;
     TextView loginEmail;
@@ -49,6 +50,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        imageView = findViewById(R.id.image_logo);
+        imageView.setImageResource(R.drawable.logo);
 
 //        ButterKnife.bind(this);
 
