@@ -16,14 +16,14 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/text123"
+            android:id="@+id/main_date"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_marginLeft="30dp"
             android:layout_weight="1"
             android:gravity="center|left"
-            android:text="D-1"
+            android:text="Data"
             android:textColor="@color/white"
             android:textSize="50sp" />
 
@@ -43,27 +43,42 @@
     <LinearLayout
         android:id="@+id/center_linear_layout3"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="match_parent"
         android:background="#424CFF"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:paddingLeft="20sp"
+        android:paddingBottom="20sp">
 
         <TextView
-            android:id="@+id/tex33t"
+            android:id="@+id/main_title"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="D-Day!!"
+            android:layout_weight="0.6"
+            android:gravity="center_vertical"
+            android:text="title"
+            android:textAlignment="textStart"
             android:textColor="@color/blue"
             android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/main_place"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:gravity="center_vertical"
+            android:paddingTop="10sp"
+            android:text="place"
+            android:textAlignment="textStart"
+            android:textColor="@color/blue"
+            android:textSize="26dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/center_linear_layout2"
         android:layout_width="match_parent"
-        android:layout_height="330dp"
+        android:layout_height="match_parent"
 
         android:background="#757CFF"
         android:backgroundTint="#757CFF"
@@ -71,15 +86,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="10sp">
 
             <ImageButton
                 android:id="@+id/imageButton11"
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF"
                 android:scaleType="fitCenter"
@@ -88,7 +105,7 @@
             <ImageButton
                 android:id="@+id/imageButton12"
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF"
                 android:scaleType="fitCenter"
@@ -97,7 +114,7 @@
             <ImageButton
                 android:id="@+id/imageButton13"
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF"
                 android:scaleType="fitCenter"
@@ -107,16 +124,18 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
+            android:layout_weight="1"
             android:backgroundTint="#757CFF"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingTop="10sp">
 
             <ImageButton
                 android:id="@+id/imageButton21"
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF"
                 android:scaleType="fitCenter"
@@ -125,7 +144,7 @@
             <ImageButton
                 android:id="@+id/imageButton22"
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF"
                 android:scaleType="fitCenter"
@@ -134,7 +153,7 @@
             <ImageButton
                 android:id="@+id/imageButton23"
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF"
                 android:scaleType="fitCenter"
@@ -144,33 +163,35 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
+            android:layout_weight="1"
             android:backgroundTint="#757CFF"
             android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/imageButton31"
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#757CFF"
                 android:backgroundTint="#757CFF"
+                android:paddingTop="10sp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/stoneparty" />
 
             <TextView
                 android:id="@+id/imageButton32"
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF" />
 
             <ImageButton
                 android:id="@+id/imageButton33"
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#757CFF"
                 android:scaleType="fitCenter"
