@@ -112,11 +112,14 @@ public class SetScheduleActivity extends AppCompatActivity {
             setSchedule("date", datePicker);
             setSchedule("time", timePicker);
 
+            Toast.makeText(SetScheduleActivity.this, (num+1) + "번 째 일정이 추가되었습니다.",Toast.LENGTH_LONG).show();
+
+            finish();
             //str = title.getText() + " / " + category.getText() + " / " + gift.getText() + " / " +
             //        location.getText() + " / " + memo.getText();
 
             //makeText(SetScheduleActivity.this, str, LENGTH_SHORT).show();
-            //Toast.makeText(SetScheduleActivity.this, datePicker.getYear() + " 년 " +
+
             //        (datePicker.getMonth()+1) + " 월 " + datePicker.getDayOfMonth() + " 일 입니다.", LENGTH_SHORT).show();
             //makeText(SetScheduleActivity.this, timePicker.getHour() + " 시 " + timePicker.getMinute() + " 분 ", LENGTH_SHORT).show();
             //myRef.setValue(str);
@@ -128,7 +131,6 @@ public class SetScheduleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_schedule_main);
 
-        Toast.makeText(SetScheduleActivity.this, user.getUid() + "", Toast.LENGTH_SHORT).show();
         Button add_btn;
         textColor(findViewById(R.id.datePicker), Color.WHITE);
         textColor(findViewById(R.id.timePicker), Color.WHITE);
