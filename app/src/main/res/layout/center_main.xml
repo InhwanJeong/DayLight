@@ -1,15 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/center_linear_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
 
-    <ListView
-        android:id="@+id/list_view"
+    <LinearLayout
+        android:id="@+id/center_linear_layout4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:divider="@null"/>
+        android:layout_height="120dp"
+        android:background="#00FF0808"
+        android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/text123"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="D-1"
+            android:textColor="@color/blue"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/title123"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="맑음"
+            android:textColor="@color/colorAccent"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/center_linear_layout3"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#00FF0B0B"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tex33t"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="D-Day!!"
+            android:textColor="@color/blue"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/center_linear_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton11"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/imageButton12"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher_round"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/imageButton13"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:src="@drawable/googleg_standard_color_18"
+                tools:srcCompat="@tools:sample/avatars" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton21"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/imageButton22"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                tools:srcCompat="@tools:sample/avatars"
+                tools:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/imageButton23"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:src="@drawable/common_google_signin_btn_icon_dark"
+                tools:srcCompat="@tools:sample/avatars" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton31"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:src="@drawable/common_google_signin_btn_icon_dark"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/imageButton32"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/imageButton33"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:src="@drawable/common_google_signin_btn_icon_dark"
+                tools:srcCompat="@tools:sample/avatars" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -1,6 +1,9 @@
 package com.project.daylight;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -43,6 +46,8 @@ public class ListAdapter extends ArrayAdapter<String> {
             holder.swipeLayout = (SwipeRevealLayout) convertView.findViewById(R.id.swipe_layout);
             holder.frontView = convertView.findViewById(R.id.front_layout);
             holder.deleteView = convertView.findViewById(R.id.delete_layout);
+            holder.shareView = convertView.findViewById(R.id.share_layout);
+            holder.updateView = convertView.findViewById(R.id.update_layout);
             holder.textView = (TextView) convertView.findViewById(R.id.text);
             holder.swipeTextView = (TextView) convertView.findViewById(R.id.swipe_title);
 
@@ -62,6 +67,26 @@ public class ListAdapter extends ArrayAdapter<String> {
                 @Override
                 public void onClick(View v) {
                     remove(item);
+                }
+            });
+            holder.updateView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //TODO make update callback
+                }
+            });
+            holder.shareView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(),MainActivity.class); // 최상단 액티비티의 컨텐트를 가져옴
+                    Intent msg = new Intent(Intent.ACTION_SEND);
+
+                    msg.addCategory(Intent.CATEGORY_DEFAULT);
+                    msg.putExtra(Intent.EXTRA_SUBJECT, "주제");
+                    msg.putExtra(Intent.EXTRA_TEXT, "종강");
+                    msg.putExtra(Intent.EXTRA_TITLE, "안드로이드 빨리 제발");
+                    msg.setType("text/plain");
+                    v.getContext().startActivity(Intent.createChooser(msg, "공유"));
                 }
             });
             holder.frontView.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +122,8 @@ public class ListAdapter extends ArrayAdapter<String> {
         SwipeRevealLayout swipeLayout;
         View frontView;
         View deleteView;
+        View shareView;
+        View updateView;
         TextView textView;
         TextView swipeTextView;
     }

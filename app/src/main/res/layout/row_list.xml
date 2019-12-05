@@ -5,6 +5,7 @@
     android:id="@+id/swipe_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:padding="1dp"
     app:dragEdge="right"
     app:mode="same_level">
 
@@ -12,21 +13,23 @@
         android:id="@+id/delete_layout"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:background="#ffcc0000">
+        android:padding="1dp"
+        android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/share_layout"
             android:layout_width="70dp"
             android:layout_height="match_parent"
-            android:background="@android:color/holo_red_dark"
+            android:background="#B3CC0000"
             android:gravity="center"
             android:text="Share"
             android:textColor="@android:color/white" />
 
         <TextView
+            android:id="@+id/update_layout"
             android:layout_width="70dp"
             android:layout_height="match_parent"
-            android:background="@android:color/holo_red_dark"
+            android:background="#D9CC0000"
             android:gravity="center"
             android:text="Update"
             android:textColor="@android:color/white" />
