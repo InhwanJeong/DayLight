@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/pastelDark"
     android:orientation="vertical"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
-    android:background="@color/pastelDark"
     tools:context=".SignupActivity">
 
     <ImageView
@@ -29,9 +29,14 @@
 
         android:layout_marginTop="20dp"
         android:layout_weight="0"
+        android:background="@color/pastel"
         android:ems="10"
         android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:paddingLeft="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="24dp" />
 
     <EditText
         android:id="@+id/sign_up_pwd"
@@ -40,15 +45,21 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:layout_weight="0"
+        android:background="@color/pastel"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="24dp" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
         android:orientation="horizontal"
         android:paddingLeft="20dp"
         android:paddingRight="20dp">
@@ -59,10 +70,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:background="@color/pastelAccent"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:background="@color/pastelDeepAccent"
             android:text="Cancel"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             app:layout_constraintStart_toEndOf="@+id/sign_up_btn" />
 
         <Button
@@ -71,9 +84,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:background="@color/pastelAccent"
             android:gravity="center_horizontal|center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:text="Join Us!"
-            android:background="@color/pastelDeepAccent"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
