@@ -5,14 +5,14 @@
     android:id="@+id/center_linear_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#757CFF"
+    android:background="@color/pastelDark"
     android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/center_linear_layout4"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="#424CFF"
+        android:background="@color/pastelDark"
         android:orientation="horizontal">
 
         <TextView
@@ -43,8 +43,8 @@
     <LinearLayout
         android:id="@+id/center_linear_layout3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#424CFF"
+        android:layout_height="wrap_content"
+        android:background="@color/pastelDark"
         android:orientation="vertical"
         android:paddingLeft="20sp"
         android:paddingBottom="20sp">
@@ -80,13 +80,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        android:background="#757CFF"
-        android:backgroundTint="#757CFF"
+        android:background="@color/pastelDark"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_weight="1"
@@ -98,7 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#757CFF"
+                android:background="@color/pastel"
                 android:scaleType="fitCenter"
                 android:src="@drawable/anniversary" />
 
@@ -107,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#757CFF"
+                android:background="@color/pastel"
                 android:scaleType="fitCenter"
                 android:src="@drawable/exchange" />
 
@@ -116,7 +115,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#757CFF"
+                android:background="@color/pastel"
                 android:scaleType="fitCenter"
                 android:src="@drawable/pe" />
 
@@ -124,11 +123,11 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_weight="1"
-            android:backgroundTint="#757CFF"
+            android:background="@color/pastel"
             android:orientation="horizontal"
             android:paddingTop="10sp">
 
@@ -137,7 +136,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#757CFF"
+                android:background="@color/pastel"
                 android:scaleType="fitCenter"
                 android:src="@drawable/work" />
 
@@ -146,7 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#757CFF"
+                android:background="@color/pastel"
                 android:scaleType="fitCenter"
                 android:src="@drawable/business" />
 
@@ -155,7 +154,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#757CFF"
+                android:background="@color/pastel"
                 android:scaleType="fitCenter"
                 android:src="@drawable/couple" />
 
@@ -167,7 +166,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_weight="1"
-            android:backgroundTint="#757CFF"
+            android:background="@color/pastel"
             android:orientation="horizontal">
 
             <ImageButton
@@ -175,8 +174,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#757CFF"
-                android:backgroundTint="#757CFF"
+                android:background="@color/pastel"
                 android:paddingTop="10sp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/stoneparty" />
@@ -186,14 +184,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#757CFF" />
+                android:background="@color/pastel"/>
 
             <ImageButton
                 android:id="@+id/imageButton33"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#757CFF"
+                android:background="@color/pastel"
                 android:scaleType="fitCenter"
                 android:src="@drawable/meal" />
 

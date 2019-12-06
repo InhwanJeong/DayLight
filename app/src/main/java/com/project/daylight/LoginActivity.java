@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         imageView = findViewById(R.id.image_logo);
-        imageView.setImageResource(R.drawable.logo);
+        //imageView.setImageResource(R.drawable.logo);
 
 //        ButterKnife.bind(this);
 

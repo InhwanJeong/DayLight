@@ -6,11 +6,17 @@
         <item name="colorPrimary">#757CFF</item>
         <item name="colorPrimaryDark">@color/pastelDeepDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:timePickerStyle">@style/AppTheme.View.NumberPickerStyle</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="NumberPickerStyle">
+    <style name="AppTheme.View">
+        <item name="editTextColor">@color/white</item>
+        <item name="android:editTextColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.View.NumberPickerStyle">
         <item name="android:textSize">30dp</item>
         <item name="android:textStyle">bold</item>
     </style>
