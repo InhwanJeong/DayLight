@@ -8,7 +8,7 @@
 
 ## Contributor
 - Taeyong LEE (pastelhawk@gmail.com)
-- Inhwan JEONG 정인환
+- Inhwan JEONG 정인환 (
 - Mingwang SONG 송민광 (alsrhkd77@gmail.com)
 - Donghyeon 김동현 (emboob@naver.com)
 
