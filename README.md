@@ -7,7 +7,7 @@
 
 
 ## Contributor
-- Taeyong LEE (pastelhawk@gmail.com)
+- Taeyong LEE 이태용 (pastelhawk@gmail.com)
 - Inhwan JEONG 정인환 (ghjklla007@naver.com)
 - Mingwang SONG 송민광 (alsrhkd77@gmail.com)
 - Donghyeon 김동현 (emboob@naver.com)
